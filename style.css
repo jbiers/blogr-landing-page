@@ -2,68 +2,27 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
 
-    --text-color: hsl(0, 0%, 100%);
-    --text-color-translucent: rgba(255, 255, 255, 0.75);
-    --light-red: hsl(356, 100%, 66%);
+/*
+    IMPORTANT!!
+*/
+html {
+    font-size: 62.5%;
 }
 
 body {
-    font-family: Ubuntu;
-    font-size: 16px;
+    --text-color: hsl(0, 0%, 100%);
+    --text-color-translucent: rgba(255, 255, 255, 0.75);
+    --very-light-red: hsl(13, 100%, 72%);
+    --light-red: hsl(353, 100%, 62%);
 }
 
-header {
-    width: 100vw;
-    height: 500px;
-    background-color: brown;
-}
+.hero {
+    width: 100%;
+    height: 600px;
+    border: 1px solid black;
 
-nav {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--text-color-translucent);
-    font-weight: 700;
-}
-
-nav #logo {
-    font-size: 35px;
-}
-
-
-#menu-links, #menu-buttons {
-    display: inline-flex;
-}
-
-#menu-links {
-    background-color: blue;
-}
-
-.menu-link {
-    margin: 15px;
-}
-
-.menu-link > svg {
-    margin-left: 5px;
-}
-
-#login-button {
-    margin: 14px 25px 0 0;
-}
-
-.round-button {
-    padding: 14px 40px;
-    border-radius: 22px;
-}
-
-#signup-button {
-    background-color: var(--text-color);
-    color: var(--light-red);
-}
-
-#sandwich {
-    display: none;
+    /*background-image: linear-gradient(135deg, var(--very-light-red), var(--light-red));*/
+    background-image: url(./assets/images/bg-pattern-intro-mobile.svg);
 }
