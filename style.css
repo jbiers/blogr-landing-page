@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 /*
     IMPORTANT!!
 */
@@ -16,13 +20,231 @@ body {
     --text-color-translucent: rgba(255, 255, 255, 0.75);
     --very-light-red: hsl(13, 100%, 72%);
     --light-red: hsl(353, 100%, 62%);
+    --very-dark-blue: hsl(208, 49%, 24%);
+    --very-dark-grayish-blue: hsl(207, 13%, 34%);
+    --very-dark-gray-blue: hsl(237, 17%, 21%);
+    --very-dark-desaturated-blue: hsl(237, 23%, 32%);
+    --very-dark-black-blue: hsl(240, 10%, 16%);
 }
 
 .hero {
     width: 100%;
     height: 600px;
-    border: 1px solid black;
 
-    /*background-image: linear-gradient(135deg, var(--very-light-red), var(--light-red));*/
-    background-image: url(./assets/images/bg-pattern-intro-mobile.svg);
+    background-image: url(./assets/images/bg-pattern-intro-mobile.svg), linear-gradient(135deg, var(--very-light-red), var(--light-red));
+    background-size: 360%, 100%;
+    background-position: 35% 35%, 0% 0%;
+    background-repeat: no-repeat, no-repeat;
+
+    border-radius: 0 0 0 120px;
+    padding: 5.5rem 2.5rem 0 2.5rem;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 3.3rem;
+    width: 8rem;
+}
+
+.hamburguer {
+    width: 3.2rem;
+    height: 1.7rem;
+}
+
+.hamburguer:hover {
+    cursor: pointer;
+}
+
+.hero-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    padding: 11rem 0 0 0;
+
+    font-family: Overpass;
+}
+
+.hero-text-wrapper h1 {
+    color: var(--text-color);
+    font-size: 3.5rem;
+}
+
+.hero-text-wrapper h2 {
+    color: var(--text-color-translucent);
+    margin-top: 1.8rem;
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+
+.btn-wrapper {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    padding: 0 1.6rem 0 1.5rem;
+    margin-top: 4.5rem;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: Ubuntu;
+}
+
+.btn {
+    width: 13.6rem;
+    height: 4.8rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    border-radius: 2.4rem;
+}
+
+.btn-one {
+    color: var(--light-red);
+    background-color: var(--text-color);
+}
+
+.btn-one:hover {
+    background-color: var(--very-light-red);
+    color: var(--text-color)
+}
+
+.btn-two {
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.btn-two:hover {
+    background-color: var(--text-color);
+    color: var(--very-light-red);
+}
+
+.description {
+    width: 100%;
+    padding: 10.5rem 2.5rem 22.5rem 2.5rem;
+    font-family: Overpass;
+    display: flex;
+    flex-direction: column;
+}
+
+.description h2 {
+    width: 100%;
+    text-align: center;
+    justify-content: space-around;
+    font-size: 2.8rem;
+    color: var(--very-dark-blue);
+    padding: 0 0 8.5rem 0;
+}
+
+.description img {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-bottom: 7rem;
+    transform: scale(1.25);
+}
+
+.description h3 {
+    color: var(--very-dark-blue);
+    text-align: center;
+    font-size: 2.8rem;
+    padding-bottom: 2rem;
+}
+
+.description p {
+    font-size: 1.7rem;
+    padding: 0 0.5rem 3rem 0.5rem;
+    line-height: 3rem;
+    text-align: center;
+    color: var(--very-dark-grayish-blue);
+    font-weight: 300;
+}
+
+.description-dark {
+    width: 100%;
+    height: 610px;
+    background-image: url(./assets/images/bg-pattern-circles.svg), linear-gradient(var(--very-dark-gray-blue), var(--very-dark-desaturated-blue));
+    background-size: 600px, 100%;
+    background-repeat: no-repeat;
+    background-position: 45% -2500%, 0% 0%;
+    position: relative;
+
+    font-family: Overpass;
+
+    border-radius: 0 120px 0 120px;
+
+}
+
+.description-dark img {
+    width: 100%;
+    max-width: 400px;
+    height: 38rem;
+    position: absolute;
+    top: -180px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.description-dark h2 {
+    color: var(--text-color);
+    padding-top: 210px;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.description-dark p {
+    color: var(--text-color);
+    font-size: 1.7rem;
+    padding: 1.8rem 3rem 2rem 3rem;
+    line-height: 3rem;
+    text-align: center;
+    font-weight: 300;
+}
+
+.last {
+    padding-bottom: 0;
+}
+
+.footer-section {
+    width: 100%;
+    text-align: center;
+    font-family: Ubuntu;
+    background-color: var(--very-dark-black-blue);
+    border-radius: 0 120px 0 0;
+    color: var(--text-color);
+    padding-bottom: 3rem;
+}
+
+.footer-section h3 {
+    font-size: 1.9rem;
+    font-weight: 500;
+    padding-bottom: 3.3rem;
+}
+
+.footer-section a {
+    color: var(--text-color-translucent);
+    font-size: 1.9rem;
+}
+
+.footer-section li {
+    padding-bottom: 1.1rem;
+}
+
+.footer-section img {
+    padding: 7.8rem 0 8.2rem 0;
+}
+
+.footer-section ul {
+    padding-bottom: 4.5rem;
 }
